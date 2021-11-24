@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $uid = Session::get("uid");
 $username = Session::get("username");
 $admin = Session::get("admin");
+$email = Session::get("email");
+$supportpin = Session::get("supportpin");
 
 $sub = $user->getSubStatus();
 
@@ -51,7 +53,7 @@ Util::navbar();
 			<div class="card">
 				<div class="card-body">
 
-					<h4 class="card-title text-center">Update Password</h4>
+					<h4 class="card-title text-center">Update password</h4>
 
 					<form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
 
@@ -86,7 +88,9 @@ Util::navbar();
 							<div class="h5 border-bottom border-secondary pb-1"><?php Util::display($username); ?></div>
 							<div class="row">
 								<div class="col-12 clearfix">
-									UID: <p class="float-right mb-0"><?php Util::display($uid); ?></p>
+									User ID: <p class="float-right mb-0"><?php Util::display($uid); ?></p> <br>
+									E-Mail address: <p class="float-right mb-0"><?php Util::display($email); ?></p>
+									Support pin: <p class="float-right mb-0"><?php Util::display($supportpin); ?></p>
 								</div>
 
 								<div class="col-12 clearfix">
@@ -101,6 +105,8 @@ Util::navbar();
 											Util::display('0 days'); 
 										} ?>
 									</p>
+									
+									<br>
 									
 									<button class="btn btn-outline-primary btn-block" id="joinserver">Discord</button>
 
