@@ -1,0 +1,13 @@
+[23-Nov-2021 18:36:11 UTC] PHP Notice:  Undefined index: username in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 147
+[23-Nov-2021 18:36:11 UTC] PHP Notice:  Undefined index: password in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 148
+[23-Nov-2021 18:40:02 UTC] PHP Notice:  Undefined index: username in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 147
+[23-Nov-2021 18:40:02 UTC] PHP Notice:  Undefined index: password in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 148
+[23-Nov-2021 18:40:19 UTC] PHP Notice:  Undefined index: username in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 147
+[23-Nov-2021 18:40:19 UTC] PHP Notice:  Undefined index: password in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 148
+[23-Nov-2021 18:49:59 UTC] PHP Notice:  Trying to get property 'createdBy' of non-object in /home/revoliox/gamestrax/panel/app/models/UsersModel.php on line 123
+[23-Nov-2021 18:59:15 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/revoliox/gamestrax/panel/app/models/UsersModel.php on line 129
+[23-Nov-2021 19:36:49 UTC] PHP Notice:  Undefined variable: emailExists in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 84
+[23-Nov-2021 21:44:07 UTC] PHP Notice:  Undefined index: username in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 159
+[23-Nov-2021 21:44:07 UTC] PHP Notice:  Undefined index: password in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 160
+[23-Nov-2021 21:45:38 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 209
+[23-Nov-2021 21:45:40 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in /home/revoliox/gamestrax/panel/app/controllers/UserController.php on line 209
