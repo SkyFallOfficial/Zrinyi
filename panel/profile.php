@@ -89,7 +89,7 @@ Util::navbar();
 							<div class="row">
 								<div class="col-12 clearfix">
 									User ID: <p class="float-right mb-0"><?php Util::display($uid); ?></p> <br>
-									E-Mail address: <p class="float-right mb-0"><?php Util::display($email); ?></p>
+									E-Mail address: <p class="float-right mb-0"><?php Util::display($email); ?></p> <br>
 									Support pin: <p class="float-right mb-0"><?php Util::display($supportpin); ?></p>
 								</div>
 
