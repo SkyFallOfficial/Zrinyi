@@ -51,10 +51,6 @@ Util::navbar();
 							<input type="password" class="form-control form-control-sm" placeholder="Confirm password" name="confirmPassword" minlength="4" required>
 						</div>
 
-						<div class="form-group">
-							<input type="text" class="form-control form-control-sm" placeholder="Invite code" name="invCode" required>
-						</div>
-
 						<button class="btn btn-outline-primary btn-block" id="submit" type="submit" value="submit">Register</button>
 
 					</form>
