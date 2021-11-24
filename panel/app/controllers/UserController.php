@@ -14,6 +14,8 @@ class UserController extends Users {
 		Session::set("login", true);
 		Session::set("uid", (int) $user->uid);
 		Session::set("username", $user->username);
+		Session::set("email", $user->email);
+		Session::set("supportpin", $user->supportpin);
 		//Session::set("hwid", $user->hwid);
 		Session::set("admin", (int) $user->admin);
 		Session::set("banned", (int) $user->banned);
