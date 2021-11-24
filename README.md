@@ -1,7 +1,7 @@
 <h1 align="center">Zrinyi/h1>
 <p align="center">A fork of Znix's panel.</p>
 
-> Panel made by Znix, modified by me.. <br />
+> Panel made by Znix, modified by me. <br />
 > Default login: `admin:admin` <br />
 > Join Znix's Discord server: https://discord.gg/9Ef5t2fMkk
 
