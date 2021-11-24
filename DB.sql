@@ -42,12 +42,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`uid`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `uid` (`uid`),
-  UNIQUE KEY `hwid` (`hwid`)
+  UNIQUE KEY `hwid` (`hwid`),
+  UNIQUE KEY `supportpin` (`supportpin`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 COMMIT;
 
 INSERT INTO `users` (`uid`, `username`, `email`, `password`, `hwid`, `1234567890`, `admin`, `sub`,`banned`, `invitedBy`, `createdAt`) VALUES
-(1, 'admin', 'admin@domain.com', '$2y$10$7wOzYc.AXpXc1nE/b0IqLOsP2w1cK9LZXDUi6hoSyuWBDj3DoBjOK', NULL, 1, '2021-11-24', 0, '', '2020-11-24 16:02:50');
+(1, 'admin', 'admin@domain.com', '$2y$10$7wOzYc.AXpXc1nE/b0IqLOsP2w1cK9LZXDUi6hoSyuWBDj3DoBjOK', NULL, 1234567890, 1, '2021-11-24', 0, '', '2020-11-24 16:02:50');
 COMMIT;
 
 INSERT INTO `cheat` (`status`, `version`, `maintenance`) VALUES
