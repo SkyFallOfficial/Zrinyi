@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `hwid` varchar(255) DEFAULT NULL,
+  `supportpin` varchar(10) NOT NULL,
   `admin` int(1) NOT NULL DEFAULT 0,
   `sub` date DEFAULT NULL,
   `banned` int(1) NOT NULL DEFAULT 0,
@@ -45,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 COMMIT;
 
-INSERT INTO `users` (`uid`, `username`, `email`, `password`, `hwid`, `admin`, `sub`,`banned`, `invitedBy`, `createdAt`) VALUES
+INSERT INTO `users` (`uid`, `username`, `email`, `password`, `hwid`, `1234567890`, `admin`, `sub`,`banned`, `invitedBy`, `createdAt`) VALUES
 (1, 'admin', 'admin@domain.com', '$2y$10$7wOzYc.AXpXc1nE/b0IqLOsP2w1cK9LZXDUi6hoSyuWBDj3DoBjOK', NULL, 1, '2021-11-24', 0, '', '2020-11-24 16:02:50');
 COMMIT;
 
