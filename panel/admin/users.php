@@ -52,11 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				<thead>
 					<tr>
 
-						<th scope="col" class="text-center">UID</th>
+						<th scope="col" class="text-center">User ID</th>
 
 						<th scope="col" class="text-center">Username</th>
 						
 						<th scope="col" class="text-center">E-Mail</th>
+						
+						<th scope="col" class="text-center">Support pin</th>
 
 						<th scope="col" class="text-center">Admin</th>
 
@@ -79,6 +81,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 							<td scope="row" class="text-center"><?php Util::display($row->username); ?></td>
 							
 							<td scope="row" class="text-center"><?php Util::display($row->email); ?></td>
+
+                            <td scope="row" class="text-center"><?php Util::display($row->supportpin); ?></td>
 
 							<td class="text-center">
 								<?php if ($row->admin == 1) : ?>
