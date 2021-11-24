@@ -19,7 +19,6 @@ class UserController extends Users {
 		//Session::set("hwid", $user->hwid);
 		Session::set("admin", (int) $user->admin);
 		Session::set("banned", (int) $user->banned);
-		//Session::set("invitedBy", $user->invitedBy);
 		//Session::set("createdBy", $user->createdBy);
 
 	}
@@ -41,7 +40,6 @@ class UserController extends Users {
 		$email = trim($data['email']);
 		$password = $data['password'];
 		$confirmPassword = $data['confirmPassword'];
-		$invCode = trim($data['invCode']);
 
 		// Empty error vars
 		$userError = $passError = "";
@@ -112,32 +110,13 @@ class UserController extends Users {
 		}
 
 
-		// Validate invCode
-		if (empty($invCode)) {
-
-			return $invCodeError  = "Please enter an invite code.";
-
-		} else {
-
-			// Check if invite code is valid
-			$invCodeExists = $this->invCodeCheck($invCode);
-
-			if (!$invCodeExists) {
-
-				return $invCodeError  = "Invite code is invalid or already used.";
-
-			}
-
-		}
-
-
 		// Check if all errors are empty
-		if (empty($userError) && empty($emailError) && empty($passError) && empty($invCodeError) && empty($userExistsError)  && empty($invCodeError)) {
+		if (empty($userError) && empty($emailError) && empty($passError) && empty($userExistsError) {
 
 			// Hashing the password
 			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-			$result = $this->register($username, $email, $hashedPassword, $invCode);
+			$result = $this->register($username, $email, $hashedPassword);
 
 			// Session start
 			if ($result) {
