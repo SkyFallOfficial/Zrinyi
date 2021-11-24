@@ -39,24 +39,6 @@ class Users extends Database {
         }
     }
 
-	// Check if invite code is valid
-	protected function invCodeCheck($invCode) {
-
-		$this->prepare('SELECT * FROM `invites` WHERE `code` = ?');
-		$this->statement->execute([$invCode]);
-
-		if ($this->statement->rowCount() > 0) {
-
-			return true;
-
-		} else {
-
-			return false; 
-
-		}
-
-	}
-
 
 	// Check if sub code is valid
 	protected function subCodeCheck($subCode) {
@@ -126,24 +108,17 @@ class Users extends Database {
 
 
 	// Register - Sends data to DB
-	protected function register($username, $email, $hashedPassword, $invCode) {
+	protected function register($username, $email, $hashedPassword) {
 
-		// Get inviter's username
-		$this->prepare('SELECT `createdBy` FROM `invites` WHERE `code` = ?');
-		$this->statement->execute([$invCode]);
 		$row = $this->statement->fetch();
-		$inviter = $row->createdBy;
 		$supportpin = Util::randomCode(10);
 
 		// Sending the query - Register user
-		$this->prepare('INSERT INTO `users` (`username`, `email`, `password`, `invitedBy`, `supportpin`) VALUES (?, ?, ?, ?, ?)');
+		$this->prepare('INSERT INTO `users` (`username`, `email`, `password`, `supportpin`) VALUES (?, ?, ?, ?)');
 
 		// If user registered
-		if ($this->statement->execute([$username, $email, $hashedPassword, $inviter, $supportpin])) {
-
-			// Delete invite code // used
-			$this->prepare('DELETE FROM `invites` WHERE `code` = ?');
-			$this->statement->execute([$invCode]);
+		if ($this->statement->execute([$username, $email, $hashedPassword, $supportpin])) {
+			
 			return true;
 
 		} else {
