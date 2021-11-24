@@ -28,7 +28,7 @@
 * Set cheat version
 * Look at the support pin for users
 ###### API
-###### Note: User password and hardwareid has to be sent in base64 format.
+###### Note: User password and hardwar eid has to be sent in base64 format.
 * Sends user data in JSON format on call.
 	* Usage: `api.php?user={username}&pass={password}&hwid={hwid}&key={key}`
 	* Example: `api.php?user=admin&pass=YWRtaW4=&hwid=aHdpZA==&key=yes`
