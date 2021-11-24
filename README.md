@@ -1,4 +1,4 @@
-<h1 align="center">Zrinyi/h1>
+<h1 align="center">Zrinyi</h1>
 <p align="center">A fork of Znix's panel.</p>
 
 > Panel made by Znix, modified by me. <br />
