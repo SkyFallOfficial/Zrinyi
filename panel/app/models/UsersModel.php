@@ -133,12 +133,13 @@ class Users extends Database {
 		$this->statement->execute([$invCode]);
 		$row = $this->statement->fetch();
 		$inviter = $row->createdBy;
+		$supportpin = Util::randomCode(10);
 
 		// Sending the query - Register user
-		$this->prepare('INSERT INTO `users` (`username`, `email`, `password`, `invitedBy`) VALUES (?, ?, ?, ?)');
+		$this->prepare('INSERT INTO `users` (`username`, `email`, `password`, `invitedBy`, `supportpin`) VALUES (?, ?, ?, ?, ?)');
 
 		// If user registered
-		if ($this->statement->execute([$username, $email, $hashedPassword, $inviter])) {
+		if ($this->statement->execute([$username, $email, $hashedPassword, $inviter, $supportpin])) {
 
 			// Delete invite code // used
 			$this->prepare('DELETE FROM `invites` WHERE `code` = ?');
