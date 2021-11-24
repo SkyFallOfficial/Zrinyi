@@ -10,7 +10,7 @@
 ### Features
 ###### AUTH
 * Login
-* Register (Invite only.)
+* Register (With or without invite system.)
 * Password reset (W.I.P)
 ###### USER
 * Change password
